@@ -7,11 +7,11 @@ function getRandomImage() {
     'myszery/mysz3.jpg',
     'myszery/mysz4.jpg',
     'myszery/mysz5.jpg',
-    'myszery/mysz1.jpg',
-    'myszery/mysz2.jpg',
-    'myszery/mysz3.jpg',
-    'myszery/mysz4.jpg',
-    'myszery/mysz5.jpg'
+    'myszery/mysz6.jpg',
+    'myszery/mysz7.jpg',
+    'myszery/mysz8.jpg',
+    'myszery/mysz9.jpg',
+    'myszery/mysz10.jpg'
   ];
 
   // Losowanie jednego zdjęcia
