@@ -1,6 +1,4 @@
-// Funkcja do losowania zdjęcia
 function getRandomImage() {
-  // Pobieranie listy zdjęć z folderu 'myszery'
   const images = [
     'myszery/mysz1.jpg',
     'myszery/mysz2.jpg',
@@ -17,20 +15,33 @@ function getRandomImage() {
     'myszery/mysz13.jpg'
   ];
 
-  // Losowanie jednego zdjęcia
   const randomIndex = Math.floor(Math.random() * images.length);
   return images[randomIndex];
 }
 
-// Funkcja, która ustawia losowe zdjęcie
 function setRandomImage() {
   const imgElement = document.getElementById('mysz-image');
   const randomImage = getRandomImage();
   imgElement.src = randomImage;
 }
 
-// Inicjalizacja pierwszego zdjęcia przy załadowaniu strony
-window.onload = setRandomImage;
+let discoInterval;
+function toggleDiscoMode() {
+  if (document.getElementById('disco-mode').checked) {
+    document.body.style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+    discoInterval = setInterval(() => {
+      document.body.style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+    }, 200);
+  } else {
+    clearInterval(discoInterval);
+    document.body.style.backgroundColor = '#f5f5f5';
+  }
+}
 
-// Obsługa kliknięcia przycisku "Wylosuj Myszera"
+window.onload = () => {
+  setRandomImage();
+  document.getElementById('disco-mode').checked=false;
+}
+
 document.getElementById('randomize-btn').addEventListener('click', setRandomImage);
+document.getElementById('disco-mode').addEventListener('change', toggleDiscoMode);
