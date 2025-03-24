@@ -34,7 +34,7 @@ function toggleDiscoMode() {
     }, 200);
   } else {
     clearInterval(discoInterval);
-    document.body.style.backgroundColor = '#f5f5f5';
+    document.body.style.backgroundColor = '#121212';
   }
 }
 

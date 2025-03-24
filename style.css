@@ -1,6 +1,7 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+  background-color: #121212;
+  color: #e0e0e0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,18 +11,18 @@ body {
 
 .container {
   text-align: center;
-  background-color: #fff;
+  background-color: #1e1e1e;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   width: 90%;
   max-width: 500px;
 }
 
-h1 {
+#title {
   font-family: "Comic Sans MS";
   font-size: 2rem;
-  color: #333;
+  color: purple;
   margin-bottom: 20px;
 }
 
@@ -35,7 +36,7 @@ h1 {
   height: 200px;
   max-width: 90vw;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 button {
