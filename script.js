@@ -6,6 +6,11 @@ function getRandomImage() {
     'myszery/mysz2.jpg',
     'myszery/mysz3.jpg',
     'myszery/mysz4.jpg',
+    'myszery/mysz5.jpg',
+    'myszery/mysz1.jpg',
+    'myszery/mysz2.jpg',
+    'myszery/mysz3.jpg',
+    'myszery/mysz4.jpg',
     'myszery/mysz5.jpg'
   ];
 
