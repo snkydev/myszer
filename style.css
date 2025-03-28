@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -20,17 +24,24 @@ body {
   background-color: #121212;
   color: #e0e0e0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   height: 80vh;
   max-width: 100vw;
   margin: 0;
-  overflow: hidden;
+}
+
+.alert {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: red;
 }
 
 .container {
   text-align: center;
   background-color: #1e1e1e;
+  margin: 2rem 0.5rem;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
@@ -41,17 +52,19 @@ body {
 #title {
   font-family: "Comic Neue";
   font-size: 2rem;
-  color: purple;
+  color: magenta;
   margin-bottom: 20px;
 }
 
 #mysz-image-container {
   margin-bottom: 20px;
+  max-width: 500px;
+  height: 200px;
   object-fit: fill;
 }
 
 #mysz-image {
-  width: 500px;
+  width: 100%;
   height: 200px;
   max-width: 90vw;
   border-radius: 8px;

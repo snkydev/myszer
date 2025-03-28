@@ -29,8 +29,10 @@ let discoInterval;
 function toggleDiscoMode() {
   if (document.getElementById('disco-mode').checked) {
     document.body.style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+    setRandomImage();
     discoInterval = setInterval(() => {
       document.body.style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+      setRandomImage();
     }, 200);
   } else {
     clearInterval(discoInterval);
