@@ -20,9 +20,9 @@ audio.loop = true;
 
 function toggleDiscoMode() {
   if (document.getElementById('disco-mode').checked) {
+    audio.play().catch(error => console.log('Błąd odtwarzania:', error));
     document.body.style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
     setRandomImage();
-    audio.play();
     discoInterval = setInterval(() => {
       document.body.style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
       setRandomImage();
@@ -41,4 +41,6 @@ window.onload = () => {
 }
 
 document.getElementById('randomize-btn').addEventListener('click', setRandomImage);
-document.getElementById('disco-mode').addEventListener('change', toggleDiscoMode);
+document.getElementById('disco-mode').addEventListener('change', () => {
+  audio.play().then(() => toggleDiscoMode()).catch(error => console.log('Błąd autoodtwarzania:', error));
+});
